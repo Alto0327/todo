@@ -24,6 +24,7 @@ const Header = () => {
     setShowModal(false);
   };
 
+
   return (
     <div>
       <ul className="ContainerNavbar">
@@ -35,7 +36,7 @@ const Header = () => {
                     {showModal && <Modal showModal={showModal} closeModal={closeModal} />}
                 </li>
                 <li>
-                    <button>Change theme</button>
+                    <button onClick={undefined}>Change theme</button>
                 </li>
             </ul>
     </div>
