@@ -6,7 +6,31 @@ const Modal = ({ showModal, closeModal }) => {
     <div className={`modal ${showModal ? 'show' : 'hide'}`} onClick={closeModal}>
       <div className="modal-dialog" onClick={(e) => e.stopPropagation()}>
         <div className="modal-content">
-          <p>This is your modal content.</p>
+          <form>
+            <fieldset>
+              <legend>Creating Task</legend>
+              <div>
+                <input type="text" id="taskName" name='name' placeholder='Task Name' required/>
+              </div>
+              <label for="taskName">Due Date</label>
+              <div>
+                <input type='date' id="taskDate" name='taskDate' placeholder='Task Date' ></input>
+              </div>
+              <div>
+                <input type="radio" id="primary" name='toDO' value="primary" required/> 
+                <label for="primary">Urgent</label>
+              </div>
+              <div>
+                <input type="radio" id="second" name='toDO' value="second"/> 
+                <label for="second">Important</label>
+              </div>
+              <div>
+                <input type="radio" id="Third" name='toDO' value="third"/> 
+                <label for="Third">Do Later</label>
+              </div>
+              <button type='submit' value='submit'>Create Task</button>
+            </fieldset>
+          </form>
         </div>
       </div>
     </div>
